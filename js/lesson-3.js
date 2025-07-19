@@ -137,47 +137,83 @@
 // const sortUsers = users.toSorted((a, b) => a.age - b.age);
 // console.log(sortUsers);
 
-class Calculator {
-  constructor() {
-    this.total = 0;
+// class Calculator {
+//   constructor() {
+//     this.total = 0;
+//   }
+//   number(value) {
+//     this.total = value;
+//     return this;
+//   }
+//   getResult() {
+//     return this.total;
+//   }
+//   add(value) {
+//     this.total += value;
+//     return this;
+//   }
+//   substruct(value) {
+//     this.total -= value;
+//     return this;
+//   }
+//   divide(value) {
+//     if (value !== 0) {
+//       total /= value;
+//     } else {
+//       console.error("divide on 0 imposibble");
+//     }
+//     return this;
+//   }
+//   multiply(value) {
+// this.total *= value;
+// return this;
+//   }
+// }
+
+// const calc = new Calculator();
+// const result = calc
+//   .number(10)   // Встановлюємо початкове значення 10
+//   .add(5)       // Додаємо 5 (10 + 5 = 15)
+//   .subtract(3)  // Віднімаємо 3 (15 - 3 = 12)
+//   .multiply(4)  // Множимо на 4 (12 * 4 = 48)
+//   .divide(2)    // Ділимо на 2 (48 / 2 = 24)
+//   .getResult(); // Отримуємо результат: 24
+
+
+//   console.log(result); // 24
+
+
+// Завдання 12:
+ // Напиши клас Client який створює об'єкт з властивостями login email.
+ // Оголоси приватні властивості #login #email, доступ до яких зроби 
+ // через геттер та сеттер login email
+
+ class Client {
+  #login;
+  #email;
+
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
   }
-  number(value) {
-    this.total = value;
-    return this;
+
+  // Геттер для login
+  get login() {
+    return this.#login;
   }
-  getResult() {
-    return this.total;
+
+  // Сеттер для login
+  set login(newLogin) {
+    this.#login = newLogin;
   }
-  add(value) {
-    this.total += value;
-    return this;
+
+  // Геттер для email
+  get email() {
+    return this.#email;
   }
-  substruct(value) {
-    this.total -= value;
-    return this;
-  }
-  divide(value) {
-    if (value !== 0) {
-      total /= value;
-    } else {
-      console.error("divide on 0 imposibble");
-    }
-    return this;
-  }
-  multiply(value) {
-this.total *= value;
-return this;
+
+  // Сеттер для email
+  set email(newEmail) {
+    this.#email = newEmail;
   }
 }
-
-const calc = new Calculator();
-const result = calc
-  .number(10)   // Встановлюємо початкове значення 10
-  .add(5)       // Додаємо 5 (10 + 5 = 15)
-  .subtract(3)  // Віднімаємо 3 (15 - 3 = 12)
-  .multiply(4)  // Множимо на 4 (12 * 4 = 48)
-  .divide(2)    // Ділимо на 2 (48 / 2 = 24)
-  .getResult(); // Отримуємо результат: 24
-
-
-  console.log(result); // 24
